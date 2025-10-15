@@ -3,10 +3,19 @@
     "project_dir": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
     "project_desc": "TODO",
 
+    "python_version": [
+        "3.14",
+        "3.13",
+        "3.12",
+        "3.11",
+        "3.10",
+        "3.9"
+    ],
     "__prompts__": {
           "project_name": "Select your project name.",
           "project_dir": "Select your project directory name.",
           "project_desc": "A short project description.",
+          "python_version": "Select the target Python version for your project.",
           "initialize_uv": "Would you like to setup UV package manager?",
           "configure_remote": "Setup the remote repo?"
       }, 

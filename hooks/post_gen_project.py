@@ -3,6 +3,7 @@ import shutil
 import subprocess
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
+PYTHON_VERSION = "{{ cookiecutter.python_version }}"
 
 
 # Set up git repository
@@ -65,7 +66,7 @@ def create_gitingore():
 def init_uv():
     try:
         subprocess.check_call(
-            ["uv", "init", "--vcs", "none"],
+            ["uv", "init", "-p", PYTHON_VERSION, "--vcs", "none"],
             cwd=PROJECT_DIRECTORY,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
