@@ -7,7 +7,7 @@
 ## Getting Started
 TODO
 ```bash
-uvx cookiecutter gh:RepoName 
+uvx cookiecutter gh:blaugi/ds-template
 ```
 
 ## Project Organization
