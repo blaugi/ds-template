@@ -100,16 +100,23 @@ def set_remote(url):
     except subprocess.CalledProcessError as e:
         print(f"Error configuring remote: {e}")
 
+def _cc_to_bool(val: str) -> bool:
+    try:
+        s = str(val).strip().lower()
+    except Exception:
+        return False
+    return s in ("y", "yes", "true", "t", "1")
+
 
 if __name__ == "__main__":
     create_gitingore()
 
-    if "{{cookiecutter.init_uv}}":
+    if _cc_to_bool("{{cookiecutter.init_uv}}"):
         init_uv()
 
-    if "{{ cookiecutter.use_git }}":
+    if _cc_to_bool("{{ cookiecutter.use_git }}"):
         init_git()
 
-    if "{{ cookiecutter.configure_remote}}":
+    if _cc_to_bool("{{ cookiecutter.configure_remote}}"):
         set_remote("{{ cookiecutter.remote_url}}")
     # copy_env()
