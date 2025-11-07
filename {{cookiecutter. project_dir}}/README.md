@@ -1,3 +1,6 @@
+# {{ cookiecutter.project_name }}
+
+{{ cookiecutter.project_desc }}
 <a id="readme-top"></a>
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -7,7 +10,6 @@
       <a href="#{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}">{{ cookiecutter.project_name }}</a>
     </li>
     <li><a href="#author">Author</a></li>
-    <li><a href="#key-users">Key Users</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -15,19 +17,12 @@
         <li><a href="#running">Running</a></li>
       </ul>
     </li>
-    <li><a href="#key-users">Key Users</a></li>
     <li><a href="#data">Data</a></li>
     <li><a href="#structure">Structure</a></li>
   </ol>
 </details>
 
-
-# {{ cookiecutter.project_name }}
-
-{{ cookiecutter.project_desc }}
-
 ## Adjusting .gitignore
-
 
 Ensure you adjust the `.gitignore` file according to your project needs. For example, since this is a template, the `/data/` folder is commented out and data will not be exlucded from source control:
 
@@ -36,14 +31,13 @@ Ensure you adjust the `.gitignore` file according to your project needs. For exa
 # /data/
 ```
 
-Typically, you want to exclude this folder if it contains either sensitive data that you do not want to add to version control or large files.
+Typically, you want to exclude this folder if it contains either sensitive data or large files that you do not want to trac. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Author
 
 - [{{ cookiecutter.full_name }}]({{ cookiecutter.email }})
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -57,7 +51,7 @@ Typically, you want to exclude this folder if it contains either sensitive data 
 
 ### Data
 
-```
+```markdown
 **TODO**
 ```
 
@@ -65,7 +59,7 @@ Typically, you want to exclude this folder if it contains either sensitive data 
 
 ## Structure
 
-```
+```markdown
 .
 ├── LICENCE
 ├── README.md
@@ -112,5 +106,3 @@ Typically, you want to exclude this folder if it contains either sensitive data 
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
